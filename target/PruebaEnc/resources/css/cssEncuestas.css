@@ -1,0 +1,315 @@
+body{
+   background-color: #0267a4;
+}	
+
+.container {
+
+ width:1200px;
+ margin:0px auto;
+ font-size:1em;
+
+}
+
+section {
+	
+  margin-top: 5%;
+  padding: 10px;
+  background-color: #00004d;
+  -moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;
+  float: left;
+  width: 100%;
+  height: 300px;
+}
+
+#iniPre{
+	heigth:300px;
+}
+
+
+
+	footer {
+	
+		text-align:center;
+        width: 87%;
+		background-color: #00004d;
+        float: left;
+
+	}
+        #logo{
+           width: 100%; 
+           background-color: #ffffff;
+           float: right;
+        }
+         #logo2{
+           width: 27%; 
+           background-color: #ffffff;
+           float: right;
+        }
+        #splogo{
+             width: 13%;
+             background-color: #ffffff;
+             float: right;
+        }
+        #btnInicio{ 
+           
+            width: 25%;
+            position: relative;
+            left: 26%;
+            margin-left: -75px;  
+            
+        }
+         #monita{
+           
+            width: 25%;
+            position: relative;
+            left: 15%;
+            margin-left: -75px;  
+            
+        }
+         #monito{
+           
+            width: 25%;
+            position: relative;
+            left: 35%;
+            margin-left: -75px;  
+            
+        }
+        
+        #azulb{ background-color: #00004d;
+        height:  70px;
+        width :100%;}
+        #azulf{background-color: #0267a4;
+        width :100%;
+        height:  60px;}
+        #titulo {
+                background-color: #ffffff;
+				margin:0px auto;
+                height: 130px;
+                width :100%;
+				clear:both;
+                //vw Text Bold
+
+	}
+        #tituloEnc{
+            text-align:center;
+            color: #00004d;
+            font-size:   4.5em;
+            position: relative;
+            top: 20%;
+            
+        }
+       
+       
+        .caritas{
+         
+          position: relative;
+          
+          margin-top: 25px; 
+          margin-bottom: 25px;
+        }
+        #ca1{
+          left: 30%;
+        }
+        #ca2{
+           left: 40%;
+       }
+        #ca3{
+           left: 50%;
+        }
+        #ca4{
+           left: 60%;
+        }
+      
+        #noaplica{
+           left: 70%;
+        }
+        #caras{
+            background-color: #ffffff;
+            margin-bottom:  50px;
+            margin: 0px 0px 0px 0px;
+        }
+        #preguntas{
+           
+            margin-top: 5%;
+  			padding: 10px;
+  			background-color: #00004d;
+  			-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;
+             
+        }
+          #preguntasl{
+           display: none; 
+           margin-top:100px;
+           margin-bottom:  100px; 
+             
+        }
+        #opciones{
+            background-color: #ffffff;
+            
+            position: relative;
+            margin-left: 0px; 
+            margin-top: 25px; 
+            margin-bottom: 25px;      
+            
+           
+        }
+        .respuestas{
+            position: relative;
+            left: 20%;
+            font-size: 1.5em;
+        }
+        
+        
+        .pregEnc{
+            
+            font-size:   2.5em;
+            color: #FFFFFF;
+            left: 5%;
+            position: relative;
+        }
+      
+        #si{
+          left: 40%;
+          width: 5%;
+        }
+        #no{
+          left: 60%;
+          width: 5%;
+        }
+        #txtSi{
+           font-size: 1.5em; 
+           position: relative;
+           left: 37%; 
+        }
+        #txtNo{
+           position: relative;
+           font-size: 1.5em; 
+           left: 55%; 
+        }
+
+        
+	/* para 980px o menos */
+
+	@media screen and (max-width:980px) {
+
+		.container {
+
+			width:98%;
+
+		}
+
+		section {
+
+			width:98%;
+
+		}
+        .imgs{
+          position: relative;
+          left: 15%;
+          margin-left: -75px;  
+           width: 35%;
+        }
+        footer {
+
+			text-align:center;
+	        width: 100%;
+			clear:both;
+
+	    }
+            
+        
+
+	}
+
+ 
+
+	/* para 700px o menos */
+
+	@media screen and (max-width:700px) {
+
+		section {
+
+			float:none;
+
+			width:96%;
+
+		}
+
+		nav, section {
+
+			font-size:1.2em;
+
+		}
+
+		aside {
+
+			margin-top:5px;
+
+		}
+
+		nav ul {
+
+			float:none;
+
+			clear:both;
+
+		}
+                .imgs{
+            width: 35%;
+            left: 20%;
+            margin-left: -75px; 
+            float:none;
+        }
+        #titulo {
+                
+                height: 80px;
+		
+
+	}
+	.respuestas{
+            position: relative;
+            left: 25%;
+            font-size: 1.3em;
+        }
+
+	}
+
+ 
+
+	/* para 480px o menos */
+
+	@media screen and (max-width:480px) {
+
+
+		section {
+
+			font-size:1.5em;
+
+		}
+
+		section {
+
+			width:94%;
+
+		}
+
+	   .imgs{
+            width: 45%;
+            
+            left: 20%;
+            margin-left: -75px; 
+            float:none;
+        }
+        #titulo {
+                
+         height: 70px;
+		 
+
+	}
+        #tituloEnc{
+            
+            font-size:   1em;
+            position: relative;
+            top: 15%;
+            
+        }
+        }	

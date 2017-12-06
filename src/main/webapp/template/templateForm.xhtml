@@ -1,0 +1,12 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/template/commonLayout.xhtml">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <ui:define name="content">
+		<h:form id="formgral" prependId="false" enctype="multipart/form-data">
+			<ui:insert name="formContent" ></ui:insert>
+		</h:form>
+    </ui:define>
+    <h:outputScript library="js" name="index.js" />
+</ui:composition>

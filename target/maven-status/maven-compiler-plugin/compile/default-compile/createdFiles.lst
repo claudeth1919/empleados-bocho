@@ -1,0 +1,12 @@
+org\vwsp\dao\EmpleadoDAO.class
+org\vwsp\daoImpl\EmpleadoDAOImpl.class
+org\vwsp\dao\TipoPersonalDAO.class
+org\vwsp\entities\TipoPersonal.class
+org\vwsp\serviceImpl\EmpleadoServiceImpl.class
+org\vwsp\dao\GenericDAO.class
+org\vwsp\entities\Empleado.class
+org\vwsp\service\EmpleadoService.class
+org\vwsp\daoImpl\TipoPersonalDAOImpl.class
+org\vwsp\daoImpl\GenericDAOImpl.class
+org\vwsp\managedBeans\IndexMB.class
+org\vwsp\managedBeans\RespuestaMB.class

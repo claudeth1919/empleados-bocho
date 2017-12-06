@@ -1,0 +1,243 @@
+
+body {
+    font-size: small;
+    font-family: Verdana, Arial, lucida, "Helvetica CE", sans-serif;
+    background-color: #0267a4;;
+   
+}
+#siteName{
+    color: #ffffff;
+}
+.txt{
+    width: 300px;}
+.txtDes{
+  vertical-align: text-top;  
+}
+
+.btnOk{
+    text-align: center;
+}
+#top {
+    background-color: #00004d; 
+    position: relative;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+}
+
+#bottom {
+    position: relative;
+    padding: 5px;  
+    background-color: #FFFFFF;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+}
+
+.center_content {
+   
+    padding: 5px;
+    min-height: 200px;
+    background-color: #00004d;
+}
+
+
+li.ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
+    background: #2C48A5;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{
+    color: #8120f0;
+}
+.login{
+    color: black;
+    width: 85%;
+}
+
+.frm_centrado{
+    margin: 0 auto;
+}
+.franja_izq{
+    background-color: #8120f0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    width: 15%;
+}
+
+.tabla_inicial{
+    height: 350px;
+    width: 100%;
+}
+.tabla_pregun{
+    height: 350px;
+    width: 100%;
+    
+}
+.tblEdicion{
+     width: 100%;
+     height: 350px;
+}
+
+.buscar{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.cambiocon{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+
+#imagen{
+    margin: 0 auto;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    border-color: black;
+}
+
+.centrado_texto{
+    text-align: center;
+}
+
+.textover{
+    vertical-align: middle;
+}
+/*.footer{
+    padding-top: 10px;
+    margin-top: 20px;
+    background-color: white;
+}*/
+
+negrita{
+    font-weight: bold;
+}
+
+.negrita.pie{
+    font-size: 10px;
+}
+
+table{
+    margin: 0 auto;
+}
+
+.mensaje{
+    font-weight: bold;
+}
+
+.encabezados{
+    font-size: 20px;
+}
+
+
+
+.ui-panelgrid .ui-panelgrid-cell{
+    border-color:darkgray;
+}
+
+
+.fondoGris{
+    background-color: gainsboro;
+}
+
+.textoArriba{
+    vertical-align: top;
+}
+
+.ancho{
+    width: 320px;
+}
+
+/*Menu*/
+div.menu{
+    text-align: left;
+}
+.menu div.ui-menubar {
+}
+.menu .ui-menu-list{
+    width:100%;
+    display: inline-flex;
+}
+div.menu>ul.ui-menu-list>li>a{
+}
+div.menu>ul.ui-menu-list>li{
+    width: 100%;
+}
+.ui-menubar > .ui-menu-list > .ui-menuitem > .ui-menuitem-link span.ui-icon-triangle-1-s{
+    float: right;
+}
+.ui-menu .ui-menuitem-text{
+    float: none;
+}
+/*Mayusculas*/
+input{text-transform: uppercase;}
+
+.centrar{
+    text-align: center;
+    margin: 0 auto;
+}
+
+html,body{
+    height:95%;
+}
+ 
+#page-wrap{
+    margin: auto;
+    height: auto;
+    min-height:95%;
+}
+ 
+#page-wrap:after{
+    width: 100%;
+    display:block;
+    clear:both;
+}
+ 
+#bottom{
+}
+
+
+.mostrarbtn{
+    display: none;
+}
+
+.margen{
+    padding-top: 10px;
+}
+
+
+
+.textoIzq{
+    text-align: left;
+}
+
+.requerido{
+    color: #5E59C6;
+}
+
+.msjnormal{
+    font-weight: normal;
+}
+
+.msjrequerido{
+    float: left;
+}
+
+.mayusculas{
+    text-transform:uppercase;
+}
+
+.todo{
+    width: 100%;
+}
+
+.tabla{
+    float: left;
+    width: 70%;
+}
+
+.imgts{
+    float: right;
+    width: 30%;
+}
