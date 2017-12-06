@@ -16,8 +16,6 @@ import javax.faces.bean.ViewScoped;
 import org.vwsp.entities.Empleado;
 import org.vwsp.entities.TipoPersonal;
 import org.vwsp.managedBeans.utils.EmpleadoAbstract;
-import org.vwsp.managedBeans.utils.ManagedBeanAbstract;
-import org.vwsp.service.EmpleadoService;
 import org.vwsp.util.EmpleadoUtils;
 
 

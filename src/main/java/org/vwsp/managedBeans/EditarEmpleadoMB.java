@@ -4,15 +4,12 @@ import java.io.Serializable;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
 
 import org.vwsp.entities.Empleado;
 import org.vwsp.managedBeans.utils.EmpleadoAbstract;
-import org.vwsp.service.EmpleadoService;
-import org.vwsp.util.EmpleadoUtils;
 
 @ManagedBean
 @ViewScoped
@@ -20,9 +17,6 @@ public class EditarEmpleadoMB extends EmpleadoAbstract implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private Empleado empleado;
-	@ManagedProperty(value = "#{empleadoService}")
-	protected EmpleadoService empleadoService;
-	
 	@PostConstruct
 	public void init() {
 		HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
@@ -52,6 +46,7 @@ public class EditarEmpleadoMB extends EmpleadoAbstract implements Serializable {
 		empleadoService.saveOrUpdate(this.empleado);
 		showMessage(INFO, "", "Empleado editado correctamente");
 	}
+	
 	
 	private void updateEmpleado() {
 		empleado.setDireccion(direccion);

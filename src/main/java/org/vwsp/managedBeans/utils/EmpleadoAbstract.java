@@ -1,22 +1,15 @@
 package org.vwsp.managedBeans.utils;
 
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.ViewScoped;
-
-import org.vwsp.entities.Empleado;
 import org.vwsp.entities.TipoPersonal;
 import org.vwsp.managedBeans.utils.ManagedBeanAbstract;
 import org.vwsp.util.EmpleadoUtils;
 
 
-public abstract class EmpleadoAbstract extends ManagedBeanAbstract implements Serializable {
+public abstract class EmpleadoAbstract extends ManagedBeanAbstract {
 	
 	protected String nombre;
 	protected Date fechaNacimiento;

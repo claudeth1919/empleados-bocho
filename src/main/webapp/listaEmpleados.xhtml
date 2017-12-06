@@ -8,7 +8,12 @@
 	<ui:define name="formContent">
 
 		<h1>Lista Empleados</h1>
-
+		
+		<h:commandLink>
+			<p:graphicImage value="/resources/images/descargarFormatoAzul.png"/>
+			<p:dataExporter type="xls" target=":formgral:tablaDeEmpleadosGuardadas" fileName="lista_empleados"/>
+		</h:commandLink>
+		
 		<p:growl autoUpdate="true" globalOnly="true" showDetail="true"
 			sticky="true" />
 
@@ -69,7 +74,7 @@
 					<p:tooltip id="elimnar" for="btnDeleteEmpleado"
 						value="Eliminar empleado" trackMouse="true" />
 				</p:commandLink>
-				<p:link outcome="editarEmpleado" id="btnEditarEmpleado">
+				<p:link outcome="editarEmpleado" id="btnEditarEmpleado" >
 					<f:param name="idEmpleado" value="#{empleado.idEmpleado}" />
 					<p:graphicImage value="/resources/images/editar.png" />
 					<p:tooltip id="Editar" for="btnEditarEmpleado"

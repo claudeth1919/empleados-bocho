@@ -38,6 +38,10 @@ public class ListaEmpleadosMB extends ManagedBeanAbstract implements Serializabl
 		this.empleados =  empleadoService.getEmpleados();
 		showMessage(INFO, "", "Se ha eliminado el usuario exitosamente");
 	}
+	
+	public void descargarExcel() {
+		System.out.println("ENTRO A VER QUÈ Pasa");
+	}
 
 	public String formatoFecha(Date fecha) {
 		return EmpleadoUtils.getDateFormatted(fecha);
