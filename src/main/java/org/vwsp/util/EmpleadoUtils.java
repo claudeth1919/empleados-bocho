@@ -58,7 +58,7 @@ public class EmpleadoUtils {
 	public final static String EMAIL_PATTERN = 
 			"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	
-	private static String CARACTERES_ACEPTADOS = "àèìòùÀÈÌÒÙáéíóúıÁÉÍÓÚİâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz ";
+	private static String CARACTERES_ACEPTADOS = "Ã¡Ã©Ã­Ã³ÃºÃÃ‰ÃÃ“ÃšABCDEFGHIJKLMÃ‘NOPQRSTUVWXYZabcdefghijklmnÃ±pqrstuvwxyz ";
 	
 	
 	public final static Locale LOCALE_MX = new Locale("es_MX");
