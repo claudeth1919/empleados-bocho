@@ -50,17 +50,6 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
  *
  */
 public class EmpleadoUtils {
-	public final static int COLUMNA_EXCEL_CORREO = 4;
-	public final static int COLUMNA_EXCEL_NOMBRE = 1;
-	public final static int COLUMNA_EXCEL_ID_EMPLEADO = 0;
-	public final static int COLUMNA_EXCEL_PUESTO = 2;
-	public final static int COLUMNA_EXCEL_MOTIVO_EVALUACION = 3;
-	
-	
-	public final static String FORO_RS = "foroRS";
-	
-	public final static String MIMETYPE_JSON = "application/json";
-	public final static String MIMETYPE_PDF = "application/pdf";
 	
 	public final static int HTTP_CODE_200 = 200;
 	
@@ -69,13 +58,7 @@ public class EmpleadoUtils {
 	public final static String EMAIL_PATTERN = 
 			"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	
-	public final static String PATH_EMAIL_TEMPLATE = "/resources/templates/email/";
-	public final static String PATH_EMAIL_IMAGES = "/resources/images/email/";
-	public final static String PATH_IMAGES = "/resources/images/";
-	
-	public final static String MIMETYPE_EXCEL_XLS = "application/vnd.ms-excel";
-	public final static String MIMETYPE_EXCEL_XLSX = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-	
+	private static String CARACTERES_ACEPTADOS = "‡ËÏÚ˘¿»Ã“Ÿ·ÈÌÛ˙˝¡…Õ”⁄›‚ÍÓÙ˚¬ Œ‘€„Òı√—’‰ÎÔˆ¸ˇƒÀœ÷‹üÁ«ﬂÿ¯≈Â∆ÊúABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnÒopqrstuvwxyz ";
 	
 	
 	public final static Locale LOCALE_MX = new Locale("es_MX");
@@ -192,6 +175,15 @@ public class EmpleadoUtils {
 	 */
 	public static void hideDialog(String jsDialogName){
 		RequestContext.getCurrentInstance().execute("PF('" + jsDialogName + "').hide()");
+	}
+
+	public static boolean isAlfabetico(String cadena) {
+		for (Character letra : cadena.toCharArray()) {
+			if(CARACTERES_ACEPTADOS.indexOf(letra+"")==-1) {
+				return false;
+			}
+		}
+		return true;
 	}
 	
 

@@ -33,6 +33,12 @@ public abstract class EmpleadoAbstract extends ManagedBeanAbstract {
 		if(EmpleadoUtils.isEmptyString(this.nombre)) {
 			addMessage(ERROR, "", "El campo nombre es requerido");
 			valid=false;
+			
+		}else {
+			if(!EmpleadoUtils.isAlfabetico(this.nombre)) {
+				addMessage(ERROR, "", "La campo nombre no puede contener números o caracteres raros");
+				valid=false;
+			}
 		}
 		if(EmpleadoUtils.isEmptyString(this.direccion)) {
 			addMessage(ERROR, "", "La campo direccion es requerido");
@@ -54,6 +60,7 @@ public abstract class EmpleadoAbstract extends ManagedBeanAbstract {
 			addMessage(ERROR, "", "La campo género es requerido");
 			valid=false;
 		}
+		
 		addMessagesToContext();
 		return valid;
 	}

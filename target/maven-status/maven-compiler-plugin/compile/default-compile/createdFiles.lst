@@ -13,5 +13,4 @@ org\vwsp\serviceImpl\EmpleadoServiceImpl.class
 org\vwsp\dao\GenericDAO.class
 org\vwsp\entities\Empleado.class
 org\vwsp\service\EmpleadoService.class
-org\vwsp\managedBeans\RespuestaMB.class
 org\vwsp\managedBeans\utils\ManagedBeanAbstract.class

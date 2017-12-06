@@ -61,6 +61,8 @@ public class IndexMB extends EmpleadoAbstract implements Serializable {
 		empleado.setTipoPersonal(this.findTipoPersonal(this.idTipoPersonalSelected));
 		return empleado;
 	}
+
+	
 	
 	
 }

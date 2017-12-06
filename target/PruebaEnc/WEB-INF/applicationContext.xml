@@ -20,9 +20,9 @@
 		<!-- Data Source Declaration DEV-->
 		<beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 			<beans:property name="driverClassName" value="com.mysql.jdbc.Driver"></beans:property>
-			<beans:property name="url" value="jdbc:mysql://localhost:3306/empleados"></beans:property>
-			<beans:property name="username" value="root"></beans:property>
-			<beans:property name="password" value=""></beans:property>
+			<beans:property name="url" value="jdbc:mysql://us-cdbr-azure-southcentral-f.cloudapp.net/anahuac"></beans:property>
+			<beans:property name="username" value="bfdb92c2478e84"></beans:property>
+			<beans:property name="password" value="67f96aa6"></beans:property>
 		</beans:bean>
 		
 		<!-- Hibernate SessionFactory, para anotaciones en las clases entity usamos AnnotationSessionFactoryBean -->
