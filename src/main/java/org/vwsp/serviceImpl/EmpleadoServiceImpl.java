@@ -50,5 +50,11 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 		return tipoEmpleadoDAO.findTiposDePersonal();
 	}
 
+	@Override
+	@Transactional(propagation = Propagation.REQUIRED)
+	public void updateEstadoInactivo(int idEmpleado) {
+		empleadoDAO.updateEstadoInactivo(idEmpleado);
+	}
+
 
 }

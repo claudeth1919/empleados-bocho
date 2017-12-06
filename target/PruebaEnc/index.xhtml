@@ -26,7 +26,7 @@
     		</p:row>
     		<p:row>
     			<p:column>
-    				<h:outputLabel value="Seleccional Tipo Personal"></h:outputLabel>
+    				<h:outputLabel value="Selecciona Tipo Personal"></h:outputLabel>
     				<p:selectOneMenu  id="tipoPersonalSelect" value="#{indexMB.idTipoPersonalSelected}" placeholder="Seleccione el tipo de personal"  style="width:125px">
 			           <f:selectItems value="#{indexMB.tiposDePersonal}"  var="tipo" itemValue="#{tipo.idTipoPersonal}" itemLabel="#{tipo.nombre}"/>
 			       </p:selectOneMenu>
@@ -48,10 +48,22 @@
 			     </p:column>
 			     
     			<p:column>
-    				  
+    				  <p:inputText value="#{indexMB.telefonoMovil}" size="50" maxlength="20" placeholder="* Teléfono Movil"/>
+    			</p:column>
+    		</p:row>
+    		<p:row>
+    			<p:column>
+    				<p:inputText value="#{indexMB.telefonoOficina}" size="50" maxlength="20" placeholder="Teléfono Oficina"/>
+			     </p:column>
+			     
+    			<p:column>
+    				  <p:inputText value="#{indexMB.telefonoCasa}" size="50" maxlength="20" placeholder="Teléfono Casa"/>
     			</p:column>
     		</p:row>
     	</p:panelGrid>
-    	
+    	<p:commandLink actionListener="#{indexMB.registrarEmpleado}" ajax="true" style="text-align:center" onclick="PF('statusDialog').show()" oncomplete="PF('statusDialog').hide()">
+			<p:graphicImage value="/resources/images/registrarAzul.png"/>
+		</p:commandLink>
+    	<ui:include src="/template/loading.xhtml" />
     </ui:define>
 </ui:composition>

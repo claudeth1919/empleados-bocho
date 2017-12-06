@@ -19,5 +19,6 @@ public interface EmpleadoService {
 	Empleado getEmpleado(int idEncuestado);
 	
 	void saveOrUpdate(Empleado empleado);
-
+	
+	void updateEstadoInactivo(int idEmpleado);
 }

@@ -1,0 +1,69 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/templateForm.xhtml">
+
+    <ui:define name="formContent">
+
+    	<h1>Editar Empleado</h1>
+
+    	<p:growl autoUpdate="true" showDetail="true" sticky="true"/>
+    	<p:panelGrid id="datosEmpleado"  styleClass="noBorder" >
+    		<p:row styleClass="ui-datatable-header ui-widget-header ui-corner-top">
+    			<p:column colspan="2">
+    				<p:outputLabel value="Datos Empleado"/>
+    			</p:column>
+    		</p:row>
+    		<p:row>
+    			<p:column>
+    				<p:inputText value="#{editarEmpleadoMB.nombre}" size="40" maxlength="100" placeholder="* Nombre" />
+    			</p:column>
+    			<p:column>
+    				<p:inputText value="#{editarEmpleadoMB.direccion}" size="50" maxlength="100" placeholder="* Direccion"/>
+    			</p:column>
+    		</p:row>
+    		<p:row>
+    			<p:column>
+    				<h:outputLabel value="Selecciona Tipo Personal"></h:outputLabel>
+    				<p:selectOneMenu  id="tipoPersonalSelect" value="#{editarEmpleadoMB.idTipoPersonalSelected}" placeholder="Seleccione el tipo de personal"  style="width:125px">
+			           <f:selectItems value="#{editarEmpleadoMB.tiposDePersonal}"  var="tipo" itemValue="#{tipo.idTipoPersonal}" itemLabel="#{tipo.nombre}"/>
+			       </p:selectOneMenu>
+			     </p:column>
+    			<p:column>
+    				  <h:outputLabel value="Fecha de nacimiento"></h:outputLabel>
+	    		      <p:calendar value="#{editarEmpleadoMB.fechaNacimiento}"  maxdate="#{editarEmpleadoMB.HOY}" style="width:96%"/>
+    			</p:column>
+    		</p:row>
+    		<p:row>
+    			<p:column>
+    				<h:outputLabel value="Genero"></h:outputLabel>
+    				<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+				        <p:selectOneRadio id="genero" value="#{editarEmpleadoMB.genero}">
+				            <f:selectItem itemLabel="Hombre" itemValue="H" />
+				            <f:selectItem itemLabel="Mujer" itemValue="M" />
+				        </p:selectOneRadio>
+				    </h:panelGrid>
+			     </p:column>
+
+    			<p:column>
+    				  <p:inputText value="#{editarEmpleadoMB.telefonoMovil}" size="50" maxlength="20" placeholder="* Teléfono Movil"/>
+    			</p:column>
+    		</p:row>
+    		<p:row>
+    			<p:column>
+    				<p:inputText value="#{editarEmpleadoMB.telefonoOficina}" size="50" maxlength="20" placeholder="Teléfono Oficina"/>
+			     </p:column>
+
+    			<p:column>
+    				  <p:inputText value="#{editarEmpleadoMB.telefonoCasa}" size="50" maxlength="20" placeholder="Teléfono Casa"/>
+    			</p:column>
+    		</p:row>
+    	</p:panelGrid>
+    	<p:commandLink actionListener="#{editarEmpleadoMB.registrarEmpleado}" ajax="true" style="text-align:center" onclick="PF('statusDialog').show()" oncomplete="PF('statusDialog').hide()">
+			<p:graphicImage value="/resources/images/registrarAzul.png"/>
+		</p:commandLink>
+    	<ui:include src="/template/loading.xhtml" />
+    </ui:define>
+</ui:composition>

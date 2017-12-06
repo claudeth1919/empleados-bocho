@@ -35,7 +35,7 @@ public class EmpleadoDAOImpl extends GenericDAOImpl<Empleado>  implements Emplea
 
 	@Override
 	public List<Empleado> findEmpleados() {
-		StringBuilder query = new StringBuilder("SELECT e FROM Empleado e");
+		StringBuilder query = new StringBuilder("SELECT e FROM Empleado e WHERE activo=1 ");
 
 		Query queryObj = currentSession().createQuery(query.toString());
 
@@ -43,6 +43,15 @@ public class EmpleadoDAOImpl extends GenericDAOImpl<Empleado>  implements Emplea
 		List<Empleado> results = queryObj.getResultList();
 
 		return results;
+	}
+
+	@Override
+	public void updateEstadoInactivo(int idEmpleado) {
+		StringBuilder query = new StringBuilder("UPDATE Empleado e SET e.activo=0 ");
+		query.append(" WHERE e.idEmpleado = :idEmpleado");
+
+		currentSession().createQuery(query.toString()).setParameter("idEmpleado", idEmpleado).executeUpdate();
+		
 	}
 	
 }

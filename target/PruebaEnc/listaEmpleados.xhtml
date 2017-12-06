@@ -1,0 +1,86 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/templateForm.xhtml">
+
+	<ui:define name="formContent">
+
+		<h1>Lista Empleados</h1>
+
+		<p:growl autoUpdate="true" globalOnly="true" showDetail="true"
+			sticky="true" />
+
+		<p:dataTable id="tablaDeEmpleadosGuardadas" editable="true"
+			value="#{listaEmpleadosMB.empleados}" var="empleado"
+			widgetVar="empleadosTabla" rowIndexVar="index"
+			emptyMessage="No se han encontrado empleados."
+			filteredValue="#{listaEmpleadosMB.filteredEmpleados}">
+
+			<f:facet name="header">
+				<p:outputPanel>
+					<h:outputText value="Buscar en todos los campos:" />
+					<p:inputText id="globalFilter"
+						onkeyup="PF('empleadosTabla').filter()" style="width:150px"
+						placeholder="Introduce caracter" />
+				</p:outputPanel>
+			</f:facet>
+
+			<p:column filterBy="#{empleado.nombre}" headerText="Nombre"
+				filterMatchMode="contains">
+				<h:outputText value="#{empleado.nombre}" />
+			</p:column>
+
+			<p:column filterBy="#{empleado.direccion}" headerText="Descripción"
+				filterMatchMode="contains">
+				<h:outputText value="#{empleado.direccion}" />
+			</p:column>
+
+			<p:column filterBy="#{empleado.telefonoMovil}" headerText="Teléfono Móvil"
+				filterMatchMode="contains">
+				<h:outputText value="#{empleado.telefonoMovil}" />
+			</p:column>
+
+			<p:column headerText="Teléfono Casa">
+				<h:outputText value="#{empleado.telefonoCasa}" />
+			</p:column>
+
+			<p:column headerText="Teléfono Oficina">
+				<h:outputText value="#{empleado.telefonoOficina}" />
+			</p:column>
+
+			<p:column  headerText="Fecha Nacimiento">
+				<h:outputText value="#{listaEmpleadosMB.formatoFecha(empleado.fechaNacimiento)}" />
+			</p:column>
+			<p:column  headerText="Género">
+				<h:outputText value="#{empleado.genero}" />
+			</p:column>
+
+			<p:column  headerText="Tipo Personal">
+				<h:outputText value="#{empleado.tipoPersonal.nombre}" />
+			</p:column>
+
+			<p:column headerText="Acciones" style="width:32px">
+				<p:commandLink id="btnDeleteEmpleado"
+					update="tablaDeEmpleadosGuardadas"
+					actionListener="#{listaEmpleadosMB.eliminarEmpleado(index)}">
+					<p:graphicImage value="/resources/images/suspender.png" />
+					<p:tooltip id="elimnar" for="btnDeleteEmpleado"
+						value="Eliminar empleado" trackMouse="true" />
+				</p:commandLink>
+				<p:link outcome="editarEmpleado" id="btnEditarEmpleado">
+					<f:param name="idEmpleado" value="#{empleado.idEmpleado}" />
+					<p:graphicImage value="/resources/images/editar.png" />
+					<p:tooltip id="Editar" for="btnEditarEmpleado"
+						value="Editar empleado" trackMouse="true" />
+				</p:link>
+			</p:column>
+
+
+
+		</p:dataTable>
+
+
+	</ui:define>
+</ui:composition>

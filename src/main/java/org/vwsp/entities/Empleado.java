@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -33,10 +34,17 @@ public class Empleado implements Serializable {
 	
 	private String direccion;
 	
+	private String telefonoCasa;
+	
+	private String telefonoOficina;
+	
+	private String telefonoMovil;
+	
 	private Character genero;
 	
-	private String fotografia;
+	private String urlFotografia;
 	
+	@Column(name = "activo", insertable = false)
 	private Boolean activo;
 	
 	
@@ -84,11 +92,12 @@ public class Empleado implements Serializable {
 	public void setGenero(Character genero) {
 		this.genero = genero;
 	}
-	public String getFotografia() {
-		return fotografia;
+	
+	public String getUrlFotografia() {
+		return urlFotografia;
 	}
-	public void setFotografia(String fotografia) {
-		this.fotografia = fotografia;
+	public void setUrlFotografia(String urlFotografia) {
+		this.urlFotografia = urlFotografia;
 	}
 	public Boolean getActivo() {
 		return activo;
@@ -97,6 +106,27 @@ public class Empleado implements Serializable {
 		this.activo = activo;
 	}
 	
-	
+	public String getTelefonoCasa() {
+		return telefonoCasa;
+	}
+	public void setTelefonoCasa(String telefonoCasa) {
+		this.telefonoCasa = telefonoCasa;
+	}
+	public String getTelefonoOficina() {
+		return telefonoOficina;
+	}
+	public void setTelefonoOficina(String telefonoOficina) {
+		this.telefonoOficina = telefonoOficina;
+	}
+	public String getTelefonoMovil() {
+		return telefonoMovil;
+	}
+	public void setTelefonoMovil(String telefonoMovil) {
+		this.telefonoMovil = telefonoMovil;
+	}
+	@Override
+	public String toString() {
+		return "ID: "+this.idEmpleado+"\ntelefono Movil: "+this.telefonoMovil+"\n Género"+ this.genero;
+	}
 
 }

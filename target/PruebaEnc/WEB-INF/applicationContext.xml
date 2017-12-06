@@ -19,10 +19,10 @@
 		
 		<!-- Data Source Declaration DEV-->
 		<beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-			<beans:property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></beans:property>
-			<beans:property name="url" value="jdbc:sqlserver://VWMXPUSSV71P:1433;databaseName=Talento;"></beans:property>
-			<beans:property name="username" value="gpysq"></beans:property>
-			<beans:property name="password" value="$DbxPW10&amp;%"></beans:property>
+			<beans:property name="driverClassName" value="com.mysql.jdbc.Driver"></beans:property>
+			<beans:property name="url" value="jdbc:mysql://localhost:3306/empleados"></beans:property>
+			<beans:property name="username" value="root"></beans:property>
+			<beans:property name="password" value=""></beans:property>
 		</beans:bean>
 		
 		<!-- Hibernate SessionFactory, para anotaciones en las clases entity usamos AnnotationSessionFactoryBean -->
@@ -32,7 +32,7 @@
 			<beans:property name="hibernateProperties">
 				<beans:props>
 					<beans:prop key="hibernate.show_sql">true</beans:prop>
-					<beans:prop key="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</beans:prop>
+					<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</beans:prop>
 					<beans:prop key="hibernate.format_sql">true</beans:prop>
 				</beans:props>
 			</beans:property>

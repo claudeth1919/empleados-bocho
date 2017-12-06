@@ -17,6 +17,7 @@
     	</h:head>
 
     	<h:body>
+    		<ui:include src="/template/commonHeader.xhtml" />
 
 			<div id="page" align="center">
 				<p:panel style="width:950px;">
@@ -24,11 +25,6 @@
 		    			<ui:insert name="content" ></ui:insert>
 		    		</div>
 		
-		    		<div id="footer">
-		    			<ui:insert name="footer">
-		    	  			<ui:include src="/template/commonFooter.xhtml"/>
-		    			</ui:insert>
-		   	    	</div>
 				</p:panel>
         	</div>
 		</h:body>
