@@ -58,8 +58,6 @@ public class EmpleadoUtils {
 	public final static String EMAIL_PATTERN = 
 			"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	
-	private static String CARACTERES_ACEPTADOS = "áéíóúÁÉÍÓÚABCDEFGHIJKLMÑNOPQRSTUVWXYZabcdefghijklmnñpqrstuvwxyz ";
-	
 	
 	public final static Locale LOCALE_MX = new Locale("es_MX");
 	
@@ -179,7 +177,9 @@ public class EmpleadoUtils {
 
 	public static boolean isAlfabetico(String cadena) {
 		for (Character letra : cadena.toCharArray()) {
-			if(CARACTERES_ACEPTADOS.indexOf(letra+"")==-1) {
+			int num = (int) letra;
+			System.out.println(num);
+			if(!( (num>=65&&num<=90) || (num>=97&&num<=122) || num ==32 || num==225 || num== 233 || num == 237 || num == 243 || num == 250 || num == 193 || num == 201 || num == 205 || num == 211 || num == 218 )) {
 				return false;
 			}
 		}
