@@ -19,15 +19,15 @@ public class TipoPersonal implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idTipoPersonal;
+	private Integer idTipoPersonal;
 
 	private String nombre;
 
-	public int getIdTipoPersonal() {
+	public Integer getIdTipoPersonal() {
 		return idTipoPersonal;
 	}
 
-	public void setIdTipoPersonal(int idTipoPersonal) {
+	public void setIdTipoPersonal(Integer idTipoPersonal) {
 		this.idTipoPersonal = idTipoPersonal;
 	}
 
